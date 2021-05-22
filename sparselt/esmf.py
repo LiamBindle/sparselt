@@ -1,5 +1,5 @@
 import xarray as xr
-import splint.linear_transform
+import sparselt.linear_transform
 
 
 # transform = ezRemap.esmf.load_weights(
@@ -17,7 +17,7 @@ def load_weights(filename, input_dims, output_dims):
     col_ind = ds_weights.col
 
     # Create a linear transform object
-    transform = splint.linear_transform.SparseLinearTransform(
+    transform = sparselt.linear_transform.SparseLinearTransform(
         weights, row_ind, col_ind,
         input_transform_dims=input_dims,
         output_transform_dims=output_dims,
