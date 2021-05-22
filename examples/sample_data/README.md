@@ -13,7 +13,7 @@ gaussian, cubed-sphere, stretched cubed-sphere grids, etc. follows the same proc
 
 The grid of our dataset is defined by the GRIDSPEC files in `c48_gridspec/`. These files were created with the 
 following [gridspec](https://github.com/LiamBindle/gridspec) command: 
-```bash
+```console
 $ gridspec-create gcs 48
 Creating gnomonic cubed-sphere grid.
   Cubed-sphere size: C48
@@ -33,7 +33,7 @@ $
 
 In this demo, the desired output grid is a simple 0.5°x0.5° grid, which is defined by `regular_lat_lon_90x180.nc`. This
 file was generated with the following [gridspec](https://github.com/LiamBindle/gridspec) command:
-```bash
+```console
 $ gridspec-create latlon 90 180
 Creating regular lat-lon grid.
   Latitude dimension:  90
@@ -51,7 +51,7 @@ $
 To regrid the input dataset to the 0.5°x0.5° grid we need the regridding weights (a sparse matrix that defines the 
 remapping). These weights are defined in `esmf_regrid_weights_c48_to_latlon90x180.nc` which was generated with 
 the following [`ESMF_RegridWeightGen`](https://earthsystemmodeling.org/docs/release/ESMF_8_1_1/ESMF_refdoc/node3.html#SECTION03020000000000000000) command:
-```bash
+```console
 $ ESMF_RegridWeightGen -s c48_gridspec/c48_gridspec.nc -d regular_lat_lon_90x180.nc -m conserve -w esmf_regrid_weights_c48_to_latlon90x180.nc --tilefile_path c48_gridspec/
  Starting weight generation with these inputs: 
    Source File: c48_gridspec/c48_gridspec.nc
