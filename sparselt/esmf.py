@@ -2,12 +2,6 @@ import xarray as xr
 import sparselt.linear_transform
 
 
-# transform = ezRemap.esmf.load_weights(
-#     'my_esmf_regrid_weights.nc',
-#     input_transform_dims=[('lat', 'lon'), (181, 360)],
-#     output_transform_dims=[('nf', 'Ydim', 'Xdim'), (6, 24, 24)],
-# )
-
 def load_weights(filename, input_dims, output_dims):
     ds_weights = xr.open_dataset(filename)
 
