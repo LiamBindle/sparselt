@@ -25,9 +25,6 @@ What about [xESMF](https://xesmf.readthedocs.io/en/latest/)? xESMF is a terrific
 grids, however, it has limited support for higher-order grids like cubed-sphere grids 
 (see [here](https://xesmf.readthedocs.io/en/latest/limitations.html)).
 
-## Examples
-
-See the `examples/` subdirectory for an example.
 
 ## Installation
 
@@ -35,6 +32,10 @@ For the meantime, you can install sparselt like so
 ```console
 $ pip install git+https://github.com/LiamBindle/sparselt.git 
 ```
+
+## Examples
+
+See the `examples/` subdirectory for an example, and `examples/sample_data/README.md` for a description of how the sample data files were generated.
 
 ## Applying ESMF regrid weights
 
