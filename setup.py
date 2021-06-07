@@ -15,5 +15,6 @@ setup(
         'numpy',
         'netcdf4',
         'xarray',
+        'scipy',
     ],
 )
