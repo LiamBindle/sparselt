@@ -6,7 +6,7 @@ More generally, sparselt makes it easy to apply vectorized sparse linear transfo
 Operations like regridding can be written as a linear transform. 
 The matrix has shape (M,N) where N is the flat-size of the output grid and M is the flat-size of the input grid. 
 Tools like `ESMF_RegridWeightGen` can generate these "regridding weights" for a variety of methods 
-(e.g., bilinear, conservative, 2-nd order conservative, patch, etc.)
+(e.g., bilinear, conservative, etc.)
 for a variety of grid types (e.g., lat-lon, gaussian, cubed-sphere, stretched cubed-sphere, etc.).
 sparselt is a small formalization for applying sparse transforms like this. 
 
