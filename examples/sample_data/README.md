@@ -31,7 +31,7 @@ Created 7 files.
 $
 ```
 
-In this demo, the desired output grid is a simple 0.5°x0.5° grid, which is defined by `regular_lat_lon_90x180.nc`. This
+In this demo, the desired output grid is a simple 2°x2° grid, which is defined by `regular_lat_lon_90x180.nc`. This
 file was generated with the following [gridspec](https://github.com/LiamBindle/gridspec) command:
 ```console
 $ gridspec-create latlon 90 180
@@ -48,7 +48,7 @@ Created 1 file.
 $
 ```
 
-To regrid the input dataset to the 0.5°x0.5° grid we need the regridding weights (a sparse matrix that defines the 
+To regrid the input dataset to the 2°x2° grid we need the regridding weights (a sparse matrix that defines the 
 remapping). These weights are defined in `esmf_regrid_weights_c48_to_latlon90x180.nc` which was generated with 
 the following [`ESMF_RegridWeightGen`](https://earthsystemmodeling.org/docs/release/ESMF_8_1_1/ESMF_refdoc/node3.html#SECTION03020000000000000000) command:
 ```console
