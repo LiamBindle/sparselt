@@ -23,11 +23,13 @@ class SparseLinearTransform:
 
         self._input_core_dims = tuple(input_transform_dims[0])
         self._input_core_shape = tuple(input_transform_dims[1])
+        input_size = np.product(self._input_core_shape)
 
         self._output_core_dims = tuple(output_transform_dims[0])
         self._output_core_shape = tuple(output_transform_dims[1])
+        output_size = np.product(self._output_core_shape)
 
-        self._matrix = scipy.sparse.csr_matrix((weights, (row_ind, col_ind)))
+        self._matrix = scipy.sparse.csr_matrix((weights, (row_ind, col_ind)), shape=(output_size, input_size))
         self._order = order
 
         self._vfunc = self._create_vfunc()
