@@ -3,7 +3,10 @@ import sparselt.linear_transform
 
 
 def load_weights(filename, input_dims, output_dims):
-    ds_weights = xr.open_dataset(filename)
+    if isinstance(filename, xr.Dataset):
+        ds_weights = filename
+    else:
+        ds_weights = xr.open_dataset(filename)
 
     # Get sparse matrix elements
     weights = ds_weights.S
