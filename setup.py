@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='sparselt',
-    version='0.1.0',
+    version='0.1.2',
     author="Liam Bindle",
     author_email="liam.bindle@gmail.com",
     description="A small library for regridding Earth system model data.",
